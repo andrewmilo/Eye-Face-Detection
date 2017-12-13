@@ -53,6 +53,8 @@ while True:
     resized_image = cv2.resize(frame, (1366,768))
 
     # Display the resulting frame
+    cv2.namedWindow('Video', cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty('Video', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
     cv2.imshow('Video', resized_image)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
