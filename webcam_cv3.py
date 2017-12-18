@@ -36,9 +36,9 @@ while True:
         minSize=(30, 30)
     )
 
-    # if len(eyes) == 2:
-    #     print "Hey YOU!"
-
+    if len(eyes) == 2:
+        cv2.putText(img = frame, text='Click the TV -->', org=(10,100), fontFace=cv2.FONT_HERSHEY_DUPLEX, fontScale=2, color = (0,255,0))
+        
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
